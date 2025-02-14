@@ -1,7 +1,7 @@
 import React from "react";
 
 
-const Home: React.FC = () => {
+function Home() {
   return (
     <div>
         <h2>Welcome to City King Buffet!</h2>
