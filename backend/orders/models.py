@@ -2,15 +2,19 @@ from django.db import models
 
 # Create your models here.
 
+
 class MenuItem(models.Model):
-    name = models.CharField(max_length=100)  # Store the name of the menu item
-    price = models.DecimalField(max_digits=6, decimal_places=2)  # Store price (e.g., 10.99)
+    id_number = models.CharField(max_length=10, unique=True, blank=True, null=True)  # Example: "C15"
+    name = models.CharField(max_length=255)
+    price = models.DecimalField(max_digits=6, decimal_places=2)
+    category = models.CharField(max_length=255)
 
     def __str__(self):
-        return self.name  # Show the name of the item in Django Admin
+        return f"{self.id_number} - {self.name}"
+
     
 
-class Order(models.Model):
+class OrderInfo(models.Model):
     customer_name = models.CharField(max_length=100)  # Store customer's name
     customer_phone = models.CharField(max_length=15)  # Store phone number
     customer_email = models.EmailField()  # Store email

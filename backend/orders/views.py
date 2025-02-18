@@ -1,7 +1,8 @@
 from django.shortcuts import render
 from rest_framework import generics
-from .models import MenuItem, Order
+from .models import MenuItem, OrderInfo
 from .serializers import MenuItemSerializer, OrderSerializer
+from django.http import JsonResponse
 
 # Create your views here.
 
@@ -13,5 +14,7 @@ class MenuItemList(generics.ListAPIView):
 
 # POST an order
 class OrderCreate(generics.CreateAPIView):
-    queryset = Order.objects.all()
+    queryset = OrderInfo.objects.all()
     serializer_class = OrderSerializer
+
+

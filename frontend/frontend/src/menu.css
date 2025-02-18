@@ -1,0 +1,65 @@
+#menu-page {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fffdf5;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+  
+  /* Two-column grid */
+  #menu-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    gap: 20px;
+  }
+  
+  /* Make sure columns take full height */
+  #left-column,
+  #right-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Space between categories */
+  }
+  
+  /* Category styles */
+  #menu-category h3 {
+    background-color: #d9534f;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 22px;
+    text-transform: uppercase;
+  }
+  
+  /* List styling */
+  #menu-category ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  #menu-category li {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    color: #444;
+  }
+  
+  #menu-category li:last-child {
+    border-bottom: none;
+  }
+  
+  #menu-category li:hover {
+    background-color: rgba(217, 83, 79, 0.1);
+  }
+  
+  /* Price styling */
+  #menu-category .price {
+    font-weight: bold;
+    color: #d9534f;
+  }
+  

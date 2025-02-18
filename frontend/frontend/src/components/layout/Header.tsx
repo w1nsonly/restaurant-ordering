@@ -1,4 +1,4 @@
-
+// components/layout/Header.tsx
 
 const Header = () => {
     return (

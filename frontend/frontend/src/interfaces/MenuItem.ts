@@ -1,6 +1,7 @@
-export interface MenuItems {
+export interface MenuItem {
     id: number;
+    id_number: string;
     name: string;
-    price: number;
-    hasOption: boolean;
+    price: string;  // JSON response gives price as a string
+    category: string;
 }

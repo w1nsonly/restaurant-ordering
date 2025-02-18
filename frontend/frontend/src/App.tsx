@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
-import Order from "./pages/Order";
-import Layout from "./components/Layout"; // Ensure correct path
+import Menu from "./pages/Menu";
+import Layout from "./components/layout/Layout"; // Ensure correct path
 
 function App() {
   console.log("App is rendering");
@@ -10,7 +10,7 @@ function App() {
         <Layout>
           <Routes>
               <Route path="/" element={<Home />} />
-              <Route path="/order" element={<Order />} />
+              <Route path="/menu" element={<Menu />} />
           </Routes>
         </Layout>
     </Router>

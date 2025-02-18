@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import MenuItem, Order
+from .models import MenuItem, OrderInfo
 
 class MenuItemSerializer(serializers.ModelSerializer):
     class Meta:
@@ -8,5 +8,5 @@ class MenuItemSerializer(serializers.ModelSerializer):
 
 class OrderSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Order
+        model = OrderInfo
         fields = '__all__'  # Includes all fields (customer info, items, price)
